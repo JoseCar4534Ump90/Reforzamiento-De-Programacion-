@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+
+int main(){    
+    int n;    
+    double a = 1, b = 1, c; // Cambiado a double para facilitar las operaciones decimales
+    double factorial = 1;   // Cambiado a double para evitar desbordamiento con números grandes
+    double suma = 0;        // ERROR CORREGIDO: Ahora acumula decimales
+    
+    cout<<"Ingrese cantidad de terminos: ";    
+    cin>>n;
+
+    for(int i=1; i<=n; i++)    
+    {        
+        factorial = factorial * i;
+        cout<<a<<" / "<<i<<"!"<<endl;        
+        
+        // ERROR CORREGIDO: Operación en punto flotante
+        suma = suma + (a / factorial);        
+        
+        c = a + b;        
+        a = b;
+        b = c;    
+    }    
+    cout<<"Suma total: "<<suma<<endl;    
+    return 0;
+}
