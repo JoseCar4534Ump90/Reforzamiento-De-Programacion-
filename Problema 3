@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+
+int main(){    
+    float salario = 0;
+    float total = 0;     // ERROR CORREGIDO: Inicializado en 0
+    int contador = 0;    // ERROR CORREGIDO: Inicializado en 0
+
+    // ERROR CORREGIDO: Se cambia a do-while para garantizar al menos una lectura de datos
+    do    
+    {        
+        cout<<"Ingrese salario (0 para salir): ";        
+        cin>>salario;
+
+        if(salario > 0)        
+        {            
+            total = total + salario;            
+            contador++;        
+        }        
+        else if(salario < 0) // Mejorado para que el '0' no tire "Salario inválido" al salir       
+        {            
+            cout<<"Salario invalido"<<endl;        
+        }    
+    } while(salario != 0); 
+
+    cout<<"Total pagado: "<<total<<endl;    
+    cout<<"Cantidad de empleados: "<<contador<<endl;    
+    return 0;
+}
