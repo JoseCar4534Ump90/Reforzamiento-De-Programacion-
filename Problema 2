@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+
+int main(){    
+    int n;    
+    long long numero = 0; 
+    cout<<"Ingrese cantidad de terminos: ";    
+    cin>>n;
+
+    for(int i=1; i<=n; i++)    
+    {        
+        // ERROR CORREGIDO: Multiplica el acumulado anterior por 10 y le suma i
+        numero = numero * 10 + i; 
+        cout<<numero<<" ";    
+    }    
+    return 0;
+}
